@@ -1,0 +1,131 @@
+char a=0;
+void setup()
+{
+   Serial.begin(9600);
+}
+void loop()
+{
+  if(Serial.available()>0)
+  {
+    a=Serial.read();
+    Serial.println(a);
+    GetChar(a);
+    delay(300);
+   }
+}
+void x()
+{
+  tone(8 ,440 ,150);
+  delay(300);
+}
+void y()
+{
+  tone(8 ,440 ,500);
+  delay(300);
+}
+void GetChar(char tmpChar)
+{
+  switch(tmpChar)
+  {
+    case'a':
+    x();
+    y();
+    break;
+    case'b':
+    y();
+    x();
+    x();
+    x();
+    break;
+    case'c':
+    y();
+    x();
+    y();
+    x();
+    break;
+    case'd':
+    y();
+    x();
+    x();
+    break;
+    case'e':
+    x();
+    break;
+    case'f':
+    x();
+    x();
+    y();
+    x();
+    break;
+    case'g':
+    y();
+    y();
+    x();
+    break;
+    case'h':
+    x();
+    x();
+    x();
+    x();
+    break;
+    case'i':
+    x();
+    x();
+    break;
+    case'j':
+    x();
+    y();
+    y();
+    y();
+    break;
+    case'k':
+    y();
+    x();
+    y();
+    break;
+    case'l':
+    x();
+    y();
+    x();
+    x();
+    break;
+    case'm':
+    y();
+    y();
+    break;
+    case'n':
+    y();
+    x();
+    break;
+    case'o':
+    y();
+    y();
+    y();
+    break;
+    case'p':
+    x();
+    y();
+    y();
+    x();
+    break;
+    case'q':
+    y();
+    y();
+    x();
+    y();
+    break;
+    case'r':
+    x();
+    y();
+    x();
+    break;
+    case's':
+    x();
+    x();
+    x();
+    break;
+    case't':
+    y();
+    break;
+  }
+}
